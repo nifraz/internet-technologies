@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>02</title>
+</head>
+
+<body>
+    <div>
+        <h3>Find diameter, Circumference and Area</h3>
+
+        <div>
+            <label for="txt">Enter Radius</label>
+            <input type="text" id="txt">
+        </div>
+        <div>
+            <button id="btn1">Find Diameter</button>
+            Diameter = <span id="ans1"></span>
+        </div>
+        <div>
+            <button id="btn2">Find Circumference</button>
+            Circumference = <span id="ans2"></span>
+        </div>
+        <div>
+            <button id="btn3">Find Area</button>
+            Area = <span id="ans3"></span>
+        </div>
+    </div>
+
+    <script>
+        const txt = document.getElementById('txt');
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+        const btn3 = document.getElementById('btn3');
+        const ans1 = document.getElementById('ans1');
+        const ans2 = document.getElementById('ans2');
+        const ans3 = document.getElementById('ans3');
+
+        btn1.addEventListener('click', ev => {
+            let r = +txt.value;
+            let res = 2 * r;
+            ans1.innerHTML = res;
+        });
+
+        btn2.addEventListener('click', ev => {
+            let r = +txt.value;
+            let res = 2 * Math.PI * r;
+            ans2.innerHTML = res;
+        });
+
+        btn3.addEventListener('click', ev => {
+            let r = +txt.value;
+            let res = Math.PI * Math.pow(r, 2);
+            ans3.innerHTML = res;
+        });
+    </script>
+</body>
+
+</html>

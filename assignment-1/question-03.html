@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>03</title>
+</head>
+
+<body>
+    <div>
+        <h3>Currency Converter</h3>
+
+        <div>Convert dollars to rupees</div>
+        <div>
+            <label for="txt1">Enter amount in dollars</label>
+            <input type="text" id="txt1">
+        </div>
+        <div>
+            <button id="btn1">Convert Dollars to Rupees</button>
+            Rupees = <span id="ans1"></span>
+        </div>
+
+        <div>Convert rupees to dollars</div>
+        <div>
+            <label for="txt2">Enter amount in rupees</label>
+            <input type="text" id="txt2">
+        </div>
+        <div>
+            <button id="btn2">Convert Rupees to Dollars</button>
+            Dollars = <span id="ans2"></span>
+        </div>
+    </div>
+
+    <script>
+        const txt1 = document.getElementById('txt1');
+        const txt2 = document.getElementById('txt2');
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+        const ans1 = document.getElementById('ans1');
+        const ans2 = document.getElementById('ans2');
+        let rate = 218.16;
+
+        btn1.addEventListener('click', ev => {
+            let val = +txt1.value;
+            let res = val * rate;
+            ans1.innerHTML = res;
+        });
+
+        btn2.addEventListener('click', ev => {
+            let val = +txt2.value;
+            let res = val / rate;
+            ans2.innerHTML = res;
+        });
+    </script>
+</body>
+
+</html>

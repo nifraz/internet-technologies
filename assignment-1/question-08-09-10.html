@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>08, 09, 10</title>
+</head>
+
+<body>
+    <div>
+        <h3>Array</h3>
+    </div>
+    <div>
+        arr1 <span id="ans1"></span>
+    </div>
+    <div>
+        sorted <span id="ans2"></span>
+    </div>
+    <div>
+        largest <span id="ans3"></span>
+    </div>
+    <div>
+        smallest <span id="ans4"></span>
+    </div>
+
+    <script>
+        const ans1 = document.getElementById('ans1');
+        const ans2 = document.getElementById('ans2');
+        const ans3 = document.getElementById('ans3');
+        const ans4 = document.getElementById('ans4');
+
+        let arr1 = [3, 8, 7, 6, 5, -4, 3, 2, 1];
+        ans1.innerHTML = arr1.toString();
+
+        let arr2 = [...arr1].sort();
+        ans2.innerHTML = arr2.toString();
+
+        let max = Math.max(...arr1);
+        ans3.innerHTML = max;
+
+        let min = Math.min(...arr1);
+        ans4.innerHTML = min;
+    </script>
+</body>
+
+</html>

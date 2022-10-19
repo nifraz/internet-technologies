@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>04</title>
+</head>
+
+<body>
+    <div>
+        <h3>Find the number odd or even</h3>
+
+        <div>
+            <label for="txt">Enter a number</label>
+            <input type="text" id="txt">
+        </div>
+        <div>
+            <button id="btn">Find</button>
+            <span id="ans"></span>
+        </div>
+    </div>
+
+    <script>
+        const txt = document.getElementById('txt');
+        const btn = document.getElementById('btn');
+        const ans = document.getElementById('ans');
+
+        btn.addEventListener('click', ev => {
+            let num = +txt.value;
+            let res = '';
+
+            if (isNaN(num)) {
+                res = 'Please enter a number';
+            }
+            else {
+                if (num % 2 == 0) {
+                    res = 'You have entered Even Number';
+                }
+                else {
+                    res = 'You have entered Odd Number';
+                }
+            }
+            ans.innerHTML = res;
+        });
+    </script>
+</body>
+
+</html>
