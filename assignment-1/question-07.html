@@ -1,46 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>04</title>
+    <title>Question 07</title>
 </head>
-
+<!-- M N M Nifraz
+SOF/21/B2/21 Nifraz -->
 <body>
-    <div>
-        <h3>Display summation</h3>
-
-        <div>
-            <label for="txt1">Enter first number</label>
-            <input type="text" id="txt1">
+    <div class="card">
+        <div class="row">
+            <h2>Display summation</h2>
         </div>
-        <div>
-            <label for="txt2">Enter last number</label>
-            <input type="text" id="txt2">
+        <hr>
+        <div class="row">
+            <label for="number1">Enter number from:</label>
+            <input type="text" id="number1">
         </div>
-        <div>
-            <button id="btn">Find</button>
-            <span id="ans"></span>
+        <div class="row">
+            <label for="number2">Enter number to:</label>
+            <input type="text" id="number2">
+        </div>
+        <div class="row">
+            <button id="button">Find</button>
+            <span id="answer"></span>
         </div>
     </div>
 
     <script>
-        const txt1 = document.getElementById('txt1');
-        const txt2 = document.getElementById('txt2');
-        const btn = document.getElementById('btn');
-        const ans = document.getElementById('ans');
+        //get element references
+        const number1 = document.getElementById('number1');
+        const number2 = document.getElementById('number2');
+        const button = document.getElementById('button');
+        const answer = document.getElementById('answer');
 
-        btn.addEventListener('click', ev => {
-            let num1 = +txt1.value;
-            let num2 = +txt2.value;
+        //add event listeners
+        button.addEventListener('click', ev => {
+            let num1 = +number1.value;
+            let num2 = +number2.value;
 
             let val = 0;
             for (let i = num1; i <= num2; i++) {
                 val = val + i;
             }
-            ans.innerHTML = val;
+            answer.innerHTML = val;
         });
     </script>
 </body>

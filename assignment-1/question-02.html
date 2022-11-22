@@ -1,60 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>02</title>
+    <title>Question 02</title>
 </head>
-
+<!-- M N M Nifraz
+SOF/21/B2/21 Nifraz -->
 <body>
-    <div>
-        <h3>Find diameter, Circumference and Area</h3>
-
-        <div>
-            <label for="txt">Enter Radius</label>
-            <input type="text" id="txt">
+    <div class="card">
+        <div class="row">
+            <h2>Diameter, Circumference, Area</h2>
         </div>
-        <div>
-            <button id="btn1">Find Diameter</button>
-            Diameter = <span id="ans1"></span>
+        <hr>
+        <div class="row">
+            <label for="radius">Enter Radius:</label>
+            <input type="text" id="radius">
         </div>
-        <div>
-            <button id="btn2">Find Circumference</button>
-            Circumference = <span id="ans2"></span>
+        <div class="row">
+            <button id="button1">Find Diameter</button>
+            = <span id="answer1"></span>
         </div>
-        <div>
-            <button id="btn3">Find Area</button>
-            Area = <span id="ans3"></span>
+        <div class="row">
+            <button id="button2">Find Circumference</button>
+            = <span id="answer2"></span>
+        </div>
+        <div class="row">
+            <button id="button3">Find Area</button>
+            = <span id="answer3"></span>
         </div>
     </div>
 
     <script>
-        const txt = document.getElementById('txt');
-        const btn1 = document.getElementById('btn1');
-        const btn2 = document.getElementById('btn2');
-        const btn3 = document.getElementById('btn3');
-        const ans1 = document.getElementById('ans1');
-        const ans2 = document.getElementById('ans2');
-        const ans3 = document.getElementById('ans3');
+        //get element references
+        const radius = document.getElementById('radius');
+        const button1 = document.getElementById('button1');
+        const button2 = document.getElementById('button2');
+        const button3 = document.getElementById('button3');
+        const answer1 = document.getElementById('answer1');
+        const answer2 = document.getElementById('answer2');
+        const answer3 = document.getElementById('answer3');
 
-        btn1.addEventListener('click', ev => {
-            let r = +txt.value;
-            let res = 2 * r;
-            ans1.innerHTML = res;
+        //add event listeners
+        button1.addEventListener('click', ev => {
+            let r = +radius.value;
+            let result = 2 * r;
+            answer1.innerHTML = result;
         });
 
-        btn2.addEventListener('click', ev => {
-            let r = +txt.value;
-            let res = 2 * Math.PI * r;
-            ans2.innerHTML = res;
+        button2.addEventListener('click', ev => {
+            let r = +radius.value;
+            let result = 2 * Math.PI * r;
+            answer2.innerHTML = result;
         });
 
-        btn3.addEventListener('click', ev => {
-            let r = +txt.value;
-            let res = Math.PI * Math.pow(r, 2);
-            ans3.innerHTML = res;
+        button3.addEventListener('click', ev => {
+            let r = +radius.value;
+            let result = Math.PI * Math.pow(r, 2);
+            answer3.innerHTML = result;
         });
     </script>
 </body>

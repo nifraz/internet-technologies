@@ -1,57 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>03</title>
+    <title>Question 03</title>
 </head>
-
+<!-- M N M Nifraz
+SOF/21/B2/21 Nifraz -->
 <body>
-    <div>
-        <h3>Currency Converter</h3>
+    <div class="card">
+        <div class="row">
+            <h2>Currency Converter</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <h3>Convert dollars to rupees</h3>
+        </div>
+        <div class="row">
+            <label for="dollars">Enter amount in dollars</label>
+            <input type="text" id="dollars">
+        </div>
+        <div class="row">
+            <button id="button1">Convert to Rupees</button>
+            = <span id="answer1"></span>
+        </div>
 
-        <div>Convert dollars to rupees</div>
-        <div>
-            <label for="txt1">Enter amount in dollars</label>
-            <input type="text" id="txt1">
+        <div class="row">
+            <h3>Convert rupees to dollars</h3>
         </div>
-        <div>
-            <button id="btn1">Convert Dollars to Rupees</button>
-            Rupees = <span id="ans1"></span>
+        <div class="row">
+            <label for="rupees">Enter amount in rupees</label>
+            <input type="text" id="rupees">
         </div>
-
-        <div>Convert rupees to dollars</div>
-        <div>
-            <label for="txt2">Enter amount in rupees</label>
-            <input type="text" id="txt2">
-        </div>
-        <div>
-            <button id="btn2">Convert Rupees to Dollars</button>
-            Dollars = <span id="ans2"></span>
+        <div class="row">
+            <button id="button2">Convert to Dollars</button>
+            = <span id="answer2"></span>
         </div>
     </div>
 
     <script>
-        const txt1 = document.getElementById('txt1');
-        const txt2 = document.getElementById('txt2');
-        const btn1 = document.getElementById('btn1');
-        const btn2 = document.getElementById('btn2');
-        const ans1 = document.getElementById('ans1');
-        const ans2 = document.getElementById('ans2');
+        //get element references
+        const dollars = document.getElementById('dollars');
+        const rupees = document.getElementById('rupees');
+        const button1 = document.getElementById('button1');
+        const button2 = document.getElementById('button2');
+        const answer1 = document.getElementById('answer1');
+        const answer2 = document.getElementById('answer2');
         let rate = 218.16;
 
-        btn1.addEventListener('click', ev => {
-            let val = +txt1.value;
+        //add event listeners
+        button1.addEventListener('click', ev => {
+            let val = +dollars.value;
             let res = val * rate;
-            ans1.innerHTML = res;
+            answer1.innerHTML = res;
         });
 
-        btn2.addEventListener('click', ev => {
-            let val = +txt2.value;
+        button2.addEventListener('click', ev => {
+            let val = +rupees.value;
             let res = val / rate;
-            ans2.innerHTML = res;
+            answer2.innerHTML = res;
         });
     </script>
 </body>

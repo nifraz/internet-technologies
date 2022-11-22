@@ -1,44 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>01</title>
+    <title>Question 01</title>
 </head>
-
+<!-- M N M Nifraz
+SOF/21/B2/21 Nifraz -->
 <body>
-    <div>
-        <h3>Find Average</h3>
-
-        <div>
-            <label for="txt1">Enter Number 1</label>
-            <input type="text" id="txt1">
+    <div class="card">
+        <div class="row">
+            <h2>Find The Average</h2>
         </div>
-        <div>
-            <label for="txt2">Enter Number 1</label>
-            <input type="text" id="txt2">
+        <hr>
+        <div class="row">
+            <label for="number1">Enter Number 1:</label>
+            <input type="text" id="number1">
         </div>
-        <div>
-            <button id="btn">Find Average</button>
+        <div class="row">
+            <label for="number2">Enter Number 1:</label>
+            <input type="text" id="number2">
         </div>
-        <div>
-            <p>Average is: <span id="ans"></span></p>
+        <div class="row">
+            <button id="button">Find Average</button>
+        </div>
+        <div class="row">
+            <p>Average is: <span id="answer"></span></p>
         </div>
     </div>
 
     <script>
-        const txt1 = document.getElementById('txt1');
-        const txt2 = document.getElementById('txt2');
-        const btn = document.getElementById('btn');
-        const ans = document.getElementById('ans');
+        //get element references
+        const number1 = document.getElementById('number1');
+        const number2 = document.getElementById('number2');
+        const button = document.getElementById('button');
+        const answer = document.getElementById('answer');
 
-        btn.addEventListener('click', ev => {
-            let num1 = +txt1.value;
-            let num2 = +txt2.value;
+        //add event listeners
+        button.addEventListener('click', ev => {
+            let num1 = +number1.value;
+            let num2 = +number2.value;
             let avg = (num1 + num2) / 2;
-            ans.innerHTML = avg;
+            answer.innerHTML = avg;
         });
     </script>
 </body>

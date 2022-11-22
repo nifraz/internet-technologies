@@ -1,47 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>08, 09, 10</title>
+    <title>Question 08, 09, 10</title>
 </head>
-
+<!-- M N M Nifraz
+SOF/21/B2/21 Nifraz -->
 <body>
-    <div>
-        <h3>Array</h3>
-    </div>
-    <div>
-        arr1 <span id="ans1"></span>
-    </div>
-    <div>
-        sorted <span id="ans2"></span>
-    </div>
-    <div>
-        largest <span id="ans3"></span>
-    </div>
-    <div>
-        smallest <span id="ans4"></span>
+    <div class="card">
+        <div class="row">
+            <h2>Array, Sort, Max, Min</h2>
+        </div>
+        <hr>
+        <div class="row">
+            Unsorted Numbers: <span id="unsortedNumbers"></span>
+        </div>
+        <div class="row">
+            Sorted Numbers: <span id="sortedNumbers"></span>
+        </div>
+        <div class="row">
+            Maximum Value: <span id="maximumValue"></span>
+        </div>
+        <div class="row">
+            Minimum Value: <span id="minimumValue"></span>
+        </div>
     </div>
 
     <script>
-        const ans1 = document.getElementById('ans1');
-        const ans2 = document.getElementById('ans2');
-        const ans3 = document.getElementById('ans3');
-        const ans4 = document.getElementById('ans4');
+        //get element references
+        const unsortedNumbers = document.getElementById('unsortedNumbers');
+        const sortedNumbers = document.getElementById('sortedNumbers');
+        const maximumValue = document.getElementById('maximumValue');
+        const minimumValue = document.getElementById('minimumValue');
 
-        let arr1 = [3, 8, 7, 6, 5, -4, 3, 2, 1];
-        ans1.innerHTML = arr1.toString();
+        //original array
+        let numbers = [3, 8, 7, 6, 5, -4, 3, 2, 1];
+        unsortedNumbers.innerHTML = numbers.toString();
 
-        let arr2 = [...arr1].sort();
-        ans2.innerHTML = arr2.toString();
+        //sorted array
+        let sorted = [...numbers].sort();
+        sortedNumbers.innerHTML = sorted.toString();
 
-        let max = Math.max(...arr1);
-        ans3.innerHTML = max;
+        //max value
+        let max = Math.max(...numbers);
+        maximumValue.innerHTML = max;
 
-        let min = Math.min(...arr1);
-        ans4.innerHTML = min;
+        //min value
+        let min = Math.min(...numbers);
+        minimumValue.innerHTML = min;
     </script>
 </body>
 

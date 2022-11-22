@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>05</title>
+    <title>Question 05</title>
 </head>
-
+<!-- M N M Nifraz
+SOF/21/B2/21 Nifraz -->
 <body>
-    <div>
-        <h3>Display all the numbers from 1 to 50</h3>
-
-        <div id="ans"></div>
+    <div class="card">
+        <div class="row">
+            <h2>Display all the numbers from 1 to 50</h2>
+        </div>
+        <hr>
+        <div class="row" id="answer"></div>
     </div>
 
     <script>
-        const ans = document.getElementById('ans');
+        //get element references
+        const answer = document.getElementById('answer');
+
         let val = '';
         for (let i = 1; i <= 50; i++) {
             val = val + i + '<br>';
         }
-        ans.innerHTML = val;
+        answer.innerHTML = val;
     </script>
 </body>
 

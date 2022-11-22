@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>06</title>
+    <title>Question 06</title>
 </head>
-
+<!-- M N M Nifraz
+SOF/21/B2/21 Nifraz -->
 <body>
-    <div>
-        <h3>Display summation of 1 to 10</h3>
-
-        summation = <span id="ans"></span>
+    <div class="card">
+        <div class="row">
+            <h2>Display summation of 1 to 10</h2>
+        </div>
+        <hr>
+        <div class="row">
+            Summation = <span id="answer"></span>
+        </div>
     </div>
 
     <script>
-        const ans = document.getElementById('ans');
+        //get element references
+        const answer = document.getElementById('answer');
 
         let val = 0;
         for (let i = 1; i <= 10; i++) {
             val = val + i;
         }
-        ans.innerHTML = val;
+        answer.innerHTML = val;
     </script>
 </body>
 

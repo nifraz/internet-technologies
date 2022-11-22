@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>04</title>
+    <title>Question 04</title>
 </head>
-
+<!-- M N M Nifraz
+SOF/21/B2/21 Nifraz -->
 <body>
-    <div>
-        <h3>Find the number odd or even</h3>
-
-        <div>
-            <label for="txt">Enter a number</label>
-            <input type="text" id="txt">
+    <div class="card">
+        <div class="row">
+            <h2>Find if the number odd or even</h2>
         </div>
-        <div>
-            <button id="btn">Find</button>
-            <span id="ans"></span>
+        <hr>
+        <div class="row">
+            <label for="number">Enter a number:</label>
+            <input type="text" id="number">
+        </div>
+        <div class="row">
+            <button id="button">Find</button>
+            <span id="answer"></span>
         </div>
     </div>
 
     <script>
-        const txt = document.getElementById('txt');
-        const btn = document.getElementById('btn');
-        const ans = document.getElementById('ans');
+        //get element references
+        const number = document.getElementById('number');
+        const button = document.getElementById('button');
+        const answer = document.getElementById('answer');
 
-        btn.addEventListener('click', ev => {
-            let num = +txt.value;
+        //add event listeners
+        button.addEventListener('click', ev => {
+            let num = +number.value;
             let res = '';
 
             if (isNaN(num)) {
-                res = 'Please enter a number';
+                res = 'Please enter a valid number!';
             }
             else {
                 if (num % 2 == 0) {
@@ -42,7 +45,7 @@
                     res = 'You have entered Odd Number';
                 }
             }
-            ans.innerHTML = res;
+            answer.innerHTML = res;
         });
     </script>
 </body>
